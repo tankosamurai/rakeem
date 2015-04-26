@@ -1,0 +1,28 @@
+{
+    "name": "tankosamurai/rakeem",
+    "description": "RakNet Protocol Parser",
+    "require": {
+        "react/datagram": "dev-master",
+        "predis/predis": "~1.1@dev",
+        "hassankhan/config": "dev-master",
+        "analog/analog": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "tankosamurai",
+            "email": "tankosamurai@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Rakeem\\": "src/",
+            "Rakeem\\Redis\\": "src/redis",
+            "Rakeem\\Protocol\\": "src/protocol",
+            "Rakeem\\Protocol\\Encapsulated\\": "src/protocol/encapsulated",
+            "Rakeem\\Controller\\": "src/controller",
+            "Rakeem\\Persistent\\": "src/persistent"
+        }
+    }
+}
