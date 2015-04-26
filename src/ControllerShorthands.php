@@ -2,9 +2,23 @@
 
 namespace Rakeem;
 
+use Analog;
+
 trait ControllerShorthands {
     protected function log($log){
-        return \Analog::log($log);
+        return $this->logDebug($log);
+    }
+
+    protected function logError($log){
+        return Analog::log($log, Analog::ERROR);
+    }
+
+    protected function logInfo($log){
+        return Analog::log($log, Analog::INFO);
+    }
+
+    protected function logDebug($log){
+        return Analog::log($log, Analog::DEBUG);
     }
 
     protected function redis(){
