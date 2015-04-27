@@ -2,14 +2,14 @@
 
 namespace Rakeem\Controller;
 
-class RakeemController extends AbstractController {
+class AppController extends AbstractController {
 
-    function __construct($socket, $addr, $rakNetPacket, $dataPacket, $packet){
-        $this->socket       = $socket;
-        $this->addr         = $addr;
-        $this->rakNetPacket = $rakNetPacket;
-        $this->dataPacket   = $dataPacket;
-        $this->packet       = $packet;
+    function __construct($socket, $addr, $rakPacket, $datPacket, $packet){
+        $this->socket    = $socket;
+        $this->addr      = $addr;
+        $this->rakPacket = $rakPacket;
+        $this->datPacket = $datPacket;
+        $this->packet    = $packet;
     }
 
     function map(){

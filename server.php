@@ -51,7 +51,7 @@ $socket->on("message", function($message, $addr, $socket){
         $packets    = Rakeem\Protocol\AbstractDataPacket::unpackPackets($rakPacket->payload);
 
         foreach($packets as $datPacket){
-            $pid = ord($datPacket->buffer{0});
+            $pid = ord($datPacket->payload{0});
 
             if(false){
             }else if($pid === Rakeem\Protocol\Encapsulated\LoginPacket::headerID){
@@ -65,7 +65,7 @@ $socket->on("message", function($message, $addr, $socket){
                 $mapper = new Rakeem\Controller\AppController($socket, $addr, $rakPacket, $datPacket, $appPacket);
             }else if($pid === Rakeem\Protocol\Encapsulated\MessageIncomingPacket::headerID){
                 $appPacket  = Rakeem\Protocol\Encapsulated\MessageIncomingPacket::unpack($datPacket->payload);
-                $mapper = new Rakeem\Controller\AppController($socket, $addr, $rakPacket, $datPacket, $appPacket);
+                $mapper = new Rakeem\Controller\MessageController($socket, $addr, $rakPacket, $datPacket, $appPacket);
             }else if($pid === Rakeem\Protocol\Encapsulated\SetTimePacket::headerID){
                 $appPacket  = Rakeem\Protocol\Encapsulated\SetTimePacket::unpack($datPacket->payload);
                 $mapper = new Rakeem\Controller\AppController($socket, $addr, $rakPacket, $datPacket, $appPacket);
