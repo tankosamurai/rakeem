@@ -2,7 +2,7 @@
 
 namespace Rakeem\Controller;
 
-class AddEntityControllerController extends AppController {
+class AddEntityController extends AppController {
 }
 
 ?>
