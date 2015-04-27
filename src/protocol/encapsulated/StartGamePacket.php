@@ -6,37 +6,37 @@ class StartGamePacket extends EncapsulatedPacket {
     const headerID = 0x87;
 
     const fieldsDefinition = [
-        "seed" = [
+        "seed" => [
             "length" => 1,
             "format" => "C",
         ],
 
-        "generator" = [
+        "generator" => [
             "length" => 1,
             "format" => "C",
         ],
 
-        "gamemode" = [
+        "gamemode" => [
             "length" => 1,
             "format" => "C",
         ],
 
-        "eid" = [
+        "eid" => [
             "length" => 8,
             "format" => "J",
         ],
 
-        "spawnX" = [
+        "spawnX" => [
             "length" => 4,
             "format" => "f"
         ],
 
-        "spawnY" = [
+        "spawnY" => [
             "length" => 4,
             "format" => "f"
         ],
 
-        "spawnZ" = [
+        "spawnZ" => [
             "length" => 4,
             "format" => "f"
         ],
