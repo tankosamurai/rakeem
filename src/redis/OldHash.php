@@ -4,7 +4,7 @@ namespace Rakeem\Redis;
 
 use Rakeem\RedisClient;
 
-abstract class Hash {
+abstract class OldHash {
 
     abstract function attributes();
 

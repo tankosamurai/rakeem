@@ -4,7 +4,7 @@ namespace Rakeem\Redis;
 
 use Rakeem\RedisClient;
 
-class DirtyHash {
+class OldDirtyHash {
 
     private $array;
     private $oldArray;
