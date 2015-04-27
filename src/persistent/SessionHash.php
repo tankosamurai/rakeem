@@ -2,10 +2,10 @@
 
 namespace Rakeem\Persistent;
 
-use Rakeem\Redis\Hash;
+use Rakeem\Redis\OldHash;
 use Rakeem\Millitime;
 
-class SessionHash extends Hash {
+class SessionHash extends OldHash {
     use Millitime;
 
     function attributes(){
