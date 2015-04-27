@@ -1,8 +1,6 @@
 <?php
 
-namespace Rakeem\Protocol;
-
-use Rakeem\Protocol\Packer;
+namespace Rakeem;
 
 class Unpacker {
     static function unpack($format, $object){

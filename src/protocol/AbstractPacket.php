@@ -2,6 +2,9 @@
 
 namespace Rakeem\Protocol;
 
+use Rakeem\Packer;
+use Rakeem\Unpacker;
+
 abstract class AbstractPacket {
 
     public $buffer;

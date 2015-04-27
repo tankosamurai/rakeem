@@ -1,6 +1,6 @@
 <?php
 
-namespace Rakeem\Protocol;
+namespace Rakeem;
 
 class Packer {
     static private $endianness;
