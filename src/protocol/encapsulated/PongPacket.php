@@ -11,7 +11,7 @@ class PongPacket extends EncapsulatedPacket {
             "format" => "J",
         ],
 
-        "unkown" => [
+        "pingID" => [
             "length" => 8,
             "format" => "J",
         ],
