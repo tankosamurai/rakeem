@@ -13,6 +13,7 @@ class SetTimePacket extends EncapsulatedPacket {
 
         "started" => [
             "length" => 1,
+            "format" => "C",
         ],
     ];
 }
