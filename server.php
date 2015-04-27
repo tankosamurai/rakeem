@@ -54,6 +54,12 @@ $socket->on("message", function($message, $addr, $socket){
             $pid = ord($datPacket->payload{0});
 
             if(false){
+            }else if($pid === Rakeem\Protocol\Encapsulated\PingPacket::headerID){
+                $appPacket  = Rakeem\Protocol\Encapsulated\PingPacket::unpack($datPacket->payload);
+                $mapper = new Rakeem\Controller\PingController($socket, $addr, $rakPacket, $datPacket, $appPacket);
+            }else if($pid === Rakeem\Protocol\Encapsulated\PongPacket::headerID){
+                $appPacket  = Rakeem\Protocol\Encapsulated\PongPacket::unpack($datPacket->payload);
+                $mapper = new Rakeem\Controller\PongController($socket, $addr, $rakPacket, $datPacket, $appPacket);
             }else if($pid === Rakeem\Protocol\Encapsulated\LoginPacket::headerID){
                 $appPacket  = Rakeem\Protocol\Encapsulated\LoginPacket::unpack($datPacket->payload);
                 $mapper = new Rakeem\Controller\LoginController($socket, $addr, $rakPacket, $datPacket, $appPacket);
