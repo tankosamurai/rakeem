@@ -4,13 +4,23 @@ namespace Rakeem\Protocol\Encapsulated;
 
 use Rakeem\Protocol\AbstractPacket;
 
-class MessageOutgoingPacket extends AbstractPacket {
+class MessageToServerPacket extends AbstractPacket {
     const headerID = 0x85;
 
     const fieldsDefinition = [
+        "nameLength" => [
+            "length" => 2,
+            "format" => "n",
+        ],
+
+        "name" => [
+            "lengthType" => "variable",
+            "length" => "nameLength",
+        ],
+
         "messageLength" => [
-            "length" => 4,
-            "format" => "N",
+            "length" => 2,
+            "format" => "n",
         ],
 
         "message" => [

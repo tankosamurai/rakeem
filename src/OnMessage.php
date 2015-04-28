@@ -61,8 +61,8 @@ class OnMessage {
                 }else if($pid === Protocol\Encapsulated\DisconnectPacket::headerID){
                     $appPacket  = Protocol\Encapsulated\DisconnectPacket::unpack($datPacket->payload);
                     $mapper = new Controller\DisconnectController($socket, $addr, $rakPacket, $datPacket, $appPacket);
-                }else if($pid === Protocol\Encapsulated\MessageIncomingPacket::headerID){
-                    $appPacket  = Protocol\Encapsulated\MessageIncomingPacket::unpack($datPacket->payload);
+                }else if($pid === Protocol\Encapsulated\MessageToServerPacket::headerID){
+                    $appPacket  = Protocol\Encapsulated\MessageToServerPacket::unpack($datPacket->payload);
                     $mapper = new Controller\MessageController($socket, $addr, $rakPacket, $datPacket, $appPacket);
                 }else if($pid === Protocol\Encapsulated\SetTimePacket::headerID){
                     $appPacket  = Protocol\Encapsulated\SetTimePacket::unpack($datPacket->payload);
