@@ -2,12 +2,13 @@
 
 namespace Rakeem\Controller;
 
+use Rakeem\Persistent\ClientHash;
+
 class PongController extends AppController {
 
     function map(){
-        $this->log($this->packet->pingID);
-        $this->log(\Rakeem\Millitime::intmillitime(true));
-        // $this->log(implode(",", unpack("C*", $this->packet->buffer)));
+        $client = new ClientHash($this->addr);
+        $client->hgetall();
         $this->send($this->rakPacket->buffer, $this->getDest());
     }
 

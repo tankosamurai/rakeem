@@ -90,6 +90,10 @@ abstract class Hash {
         return C::getInstance()->expire($this->getID(), $ttl);
     }
 
+    function setTTL($ttl = 10){
+        return $this->expire($ttl);
+    }
+
 }
 
 ?>

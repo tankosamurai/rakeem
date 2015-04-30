@@ -9,7 +9,7 @@ class UnconnectedPongController extends RakNetController {
         $p->identifier .= " (Thru Rakeem)";
         $pingID = $p->pingID;
         $id     = $p->identifier;
-        $this->logDebug("UnconnectedPong(0x1c) pingID: $pingID, identifier: $id");
+        // $this->logDebug("UnconnectedPong(0x1c) pingID: $pingID, identifier: $id");
         $this->send($p->pack(), $this->getDest());
     }
 }

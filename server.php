@@ -6,8 +6,6 @@ $conf   = Rakeem\Config::getInstance();
 $loop   = React\EventLoop\Factory::create();
 $server = stream_socket_server($conf->get("host"), $errno, $errstr, STREAM_SERVER_BIND);
 $socket = new React\Datagram\Socket($loop, $server);
-$info   = new Rakeem\Persistent\ServerInfoHash();
-$info->hmset();
 
 Analog::Handler(Analog\Handler\Stderr::init());
 
