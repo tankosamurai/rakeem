@@ -6,12 +6,12 @@ class PongPacket extends EncapsulatedPacket {
     const headerID = 0x03;
 
     const fieldsDefinition = [
-        "identifier" => [
+        "clientUptime" => [
             "length" => 8,
             "format" => "J",
         ],
 
-        "pingID" => [
+        "uptime" => [
             "length" => 8,
             "format" => "J",
         ],
