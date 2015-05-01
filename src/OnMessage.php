@@ -42,6 +42,9 @@ class OnMessage {
             $rakPacket  = Protocol\CustomPacket::unpack($message);
             $packets    = Protocol\AbstractDataPacket::unpackPackets($rakPacket->payload);
 
+            $forwarder = new Controller\Forwarder($socket, $addr, $rakPacket);
+            $forwarder->map();
+
             foreach($packets as $datPacket){
                 $pid = ord($datPacket->payload{0});
 

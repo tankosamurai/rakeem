@@ -13,7 +13,6 @@ class PingController extends AppController {
         $client->start_at = $this->intmillitime(true) - $p->uptime;
         $client->hmset();
         $client->setTTL();
-        $this->send($this->rakPacket->buffer, $this->getDest());
     }
 
 }

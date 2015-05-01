@@ -9,7 +9,6 @@ class PongController extends AppController {
     function map(){
         $client = new ClientHash($this->addr);
         $client->hgetall();
-        $this->send($this->rakPacket->buffer, $this->getDest());
     }
 
 }

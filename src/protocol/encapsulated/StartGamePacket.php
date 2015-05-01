@@ -26,17 +26,17 @@ class StartGamePacket extends EncapsulatedPacket {
             "format" => "J",
         ],
 
-        "spawnX" => [
+        "x" => [
             "length" => 4,
             "format" => "f"
         ],
 
-        "spawnY" => [
+        "y" => [
             "length" => 4,
             "format" => "f"
         ],
 
-        "spawnZ" => [
+        "z" => [
             "length" => 4,
             "format" => "f"
         ],

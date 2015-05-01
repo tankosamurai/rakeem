@@ -22,14 +22,14 @@ class LoginToServerPacket extends EncapsulatedPacket {
         ],
 
         "protocol2" => [
-            // "length" => 4,
-            // "format" => "N",
+            "length" => 4,
+            "format" => "N",
         ],
 
-        // "clientID" => [
-        //     "length" => 4,
-        //     "format" => "N",
-        // ],
+        "clientID" => [
+            "length" => 4,
+            "format" => "N",
+        ],
     ];
 }
 

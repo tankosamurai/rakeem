@@ -9,13 +9,10 @@ class LoginController extends AppController {
 
     function map(){
         if($this->isFromForward()){
-            // $p = LoginToClientPacket::unpack($datPacket->payload);
-            $this->log(implode(",", unpack("C*", $this->datPacket->payload)));
+            $p = LoginToClientPacket::unpack($this->datPacket->payload);
         }else{
-            // $p = LoginToServerPacket::unpack($this->datPacket->payload);
+            $p = LoginToServerPacket::unpack($this->datPacket->payload);
         }
-
-        $this->send($this->rakPacket->buffer, $this->getDest());
     }
 
 }
