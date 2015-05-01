@@ -16,17 +16,17 @@ class DataPacketExtra extends AbstractDatapacket {
             "format" => "t",
         ],
 
-        "unknown1" => [
+        "splitLength" => [
             "length" => 4,
             "format" => "N",
         ],
 
-        "unknown2" => [
+        "splitID" => [
             "length" => 2,
             "format" => "n",
         ],
 
-        "unknown3" => [
+        "splitIndex" => [
             "length" => 4,
             "format" => "N",
         ],
