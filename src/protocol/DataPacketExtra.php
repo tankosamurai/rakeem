@@ -16,13 +16,19 @@ class DataPacketExtra extends AbstractDatapacket {
             "format" => "t",
         ],
 
-        "unknown" => [
+        "unknown1" => [
             "length" => 4,
             "format" => "N",
         ],
 
         "unknown2" => [
-            "length" => 9,
+            "length" => 2,
+            "format" => "n",
+        ],
+
+        "unknown3" => [
+            "length" => 4,
+            "format" => "N",
         ],
 
         "payload" => [
