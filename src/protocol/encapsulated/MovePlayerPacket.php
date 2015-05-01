@@ -3,7 +3,7 @@
 namespace Rakeem\Protocol\Encapsulated;
 
 class MovePlayerPacket extends EncapsulatedPacket {
-    const headerID = 0x8f;
+    const headerID = 0x95;
 
     const fieldsDefinition = [
         "eid" => [

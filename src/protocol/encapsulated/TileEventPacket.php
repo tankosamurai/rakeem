@@ -3,7 +3,7 @@
 namespace Rakeem\Protocol\Encapsulated;
 
 class TileEventPacket extends EncapsulatedPacket {
-    const headerID = 0x95;
+    const headerID = 0x8f;
 
     const fieldsDefinition = [
         "x" => [
