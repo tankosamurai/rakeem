@@ -58,6 +58,18 @@ class OnMessage {
                 }else if($epid === Protocol\Encapsulated\PongPacket::headerID){
                     $appPacket  = Protocol\Encapsulated\PongPacket::unpack($datPacket->payload);
                     $mapper = new Controller\PongController($socket, $addr, $rakPacket, $datPacket, $appPacket);
+                }else if($epid === Protocol\Encapsulated\ClientConnectPacket::headerID){
+                    $appPacket  = Protocol\Encapsulated\ClientConnectPacket::unpack($datPacket->payload);
+                    $mapper = new Controller\ClientConnectController($socket, $addr, $rakPacket, $datPacket, $appPacket);
+                }else if($epid === Protocol\Encapsulated\ServerHandshakePacket::headerID){
+                    $appPacket  = Protocol\Encapsulated\ServerHandshakePacket::unpack($datPacket->payload);
+                    $mapper = new Controller\ServerHandshakeController($socket, $addr, $rakPacket, $datPacket, $appPacket);
+                }else if($epid === Protocol\Encapsulated\ClientHandshakePacket::headerID){
+                    $appPacket  = Protocol\Encapsulated\ClientHandshakePacket::unpack($datPacket->payload);
+                    $mapper = new Controller\ClientHandshakeController($socket, $addr, $rakPacket, $datPacket, $appPacket);
+                }else if($epid === Protocol\Encapsulated\ClientCancelPacket::headerID){
+                    $appPacket  = Protocol\Encapsulated\ClientCancelPacket::unpack($datPacket->payload);
+                    $mapper = new Controller\ClientCancelController($socket, $addr, $rakPacket, $datPacket, $appPacket);
                 }else if($epid === Protocol\Encapsulated\LoginPacket::headerID){
                     $appPacket  = Protocol\Encapsulated\LoginPacket::unpack($datPacket->payload);
                     $mapper = new Controller\LoginController($socket, $addr, $rakPacket, $datPacket, $appPacket);
