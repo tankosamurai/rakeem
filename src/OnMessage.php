@@ -46,9 +46,12 @@ class OnMessage {
             $forwarder->map();
 
             foreach($packets as $datPacket){
+                $dpid = ord($datPacket->buffer{0});
                 $epid = ord($datPacket->payload{0});
 
                 if(false){
+                }else if($dpid === Protocol\DataPacketExtra::headerID){
+                    $mapper = new Controller\DataExtraController($socket, $addr, $rakPacket, $datPacket);
                 }else if($epid === Protocol\Encapsulated\PingPacket::headerID){
                     $appPacket  = Protocol\Encapsulated\PingPacket::unpack($datPacket->payload);
                     $mapper = new Controller\PingController($socket, $addr, $rakPacket, $datPacket, $appPacket);
