@@ -19,6 +19,7 @@
         "psr-4": {
             "Rakeem\\": "src/",
             "Rakeem\\Redis\\": "src/redis",
+            "Rakeem\\Console\\": "src/console",
             "Rakeem\\Protocol\\": "src/protocol",
             "Rakeem\\Protocol\\Encapsulated\\": "src/protocol/encapsulated",
             "Rakeem\\Controller\\": "src/controller",
