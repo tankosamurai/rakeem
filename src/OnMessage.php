@@ -4,11 +4,9 @@ namespace Rakeem;
 
 class OnMessage {
     function __invoke($message, $addr, $socket){
-        $redis = Redis\Client::getInstance();
-        if("127.0.0.1:19111" === $addr){
-            $clientAddr = $redis->get("clientAddr");
-        }else{
-            $redis->set("clientAddr", $addr);
+        if("127.0.0.1:19111" !== $addr){
+            $clientAddr = new Persistent\ProxyClientAddr($addr);
+            $clientAddr->set($addr);
         }
 
         $pid = ord($message{0});

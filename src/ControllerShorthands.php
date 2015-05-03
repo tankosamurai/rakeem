@@ -53,23 +53,23 @@ trait ControllerShorthands {
         return $this->addr === $this->forwardAddr();
     }
 
-    function getClientAddr(){
-        return $this->redis()->get("clientAddr");
+    function getProxyClientAddr(){
+        if(isset($this->proxyClientAddr)){
+            return $this->proxyClientAddr;
+        }else{
+            $proxyClientAddr = new Persistent\ProxyClientAddr($this->addr);
+            return $this->proxyClientAddr = $proxyClientAddr;
+        }
     }
 
     function getDest(){
         if($this->isFromForward()){
-            return $this->getClientAddr();
+            return $this->getProxyClientAddr()->get();
         }else{
             return $this->forwardAddr();
         }
     }
 
-    function updateClientAddr(){
-        if(!$this->isFromForward()){
-            return $this->redis()->set("clientAddr", $this->addr);
-        }
-    }
 }
 
 ?>
