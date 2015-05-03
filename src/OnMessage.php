@@ -14,30 +14,38 @@ class OnMessage {
         $pid = ord($message{0});
 
         if(false){
-        }else if($pid === Protocol\UnconnectedPing::headerID){
-            $rakPacket  = Protocol\UnconnectedPing::unpack($message);
+        }else if($pid ===   Protocol\UnconnectedPing::headerID){
+            $rakPacket =    Protocol\UnconnectedPing::unpack($message);
             $mapper = new Controller\UnconnectedPingController($socket, $addr, $rakPacket);
-            // }else if($pid === Protocol\UnconnectedPingOpenConnections::headerID){
-            //     $rakPacket  = Protocol\UnconnectedPingOpenConnections::unpack($message);
-            //     $mapper = new Controller\RakNetController($socket, $addr, $rakPacket);
-        }else if($pid === Protocol\OpenConnectionRequest1::headerID){
-            $rakPacket  = Protocol\OpenConnectionRequest1::unpack($message);
+
+        // }else if($pid ===   Protocol\UnconnectedPingOpenConnections::headerID){
+        //     $rakPacket =    Protocol\UnconnectedPingOpenConnections::unpack($message);
+        //     $mapper = new Controller\UnconnectedPingOpenConnectionsController($socket, $addr, $rakPacket);
+
+        }else if($pid ===   Protocol\OpenConnectionRequest1::headerID){
+            $rakPacket =    Protocol\OpenConnectionRequest1::unpack($message);
             $mapper = new Controller\OpenConnectionRequest1Controller($socket, $addr, $rakPacket);
-        }else if($pid === Protocol\OpenConnectionReply1::headerID){
-            $rakPacket  = Protocol\OpenConnectionReply1::unpack($message);
+
+        }else if($pid ===   Protocol\OpenConnectionReply1::headerID){
+            $rakPacket =    Protocol\OpenConnectionReply1::unpack($message);
             $mapper = new Controller\OpenConnectionReply1Controller($socket, $addr, $rakPacket);
-        }else if($pid === Protocol\OpenConnectionRequest2::headerID){
-            $rakPacket  = Protocol\OpenConnectionRequest2::unpack($message);
+
+        }else if($pid ===   Protocol\OpenConnectionRequest2::headerID){
+            $rakPacket =    Protocol\OpenConnectionRequest2::unpack($message);
             $mapper = new Controller\OpenConnectionRequest2Controller($socket, $addr, $rakPacket);
-        }else if($pid === Protocol\OpenConnectionReply2::headerID){
-            $rakPacket  = Protocol\OpenConnectionReply2::unpack($message);
+
+        }else if($pid ===   Protocol\OpenConnectionReply2::headerID){
+            $rakPacket =    Protocol\OpenConnectionReply2::unpack($message);
             $mapper = new Controller\OpenConnectionReply2Controller($socket, $addr, $rakPacket);
-            // }else if($pid === Protocol\ClientConnect::headerID){
-            //     $rakPacket  = Protocol\ClientConnect::unpack($message);
-            //     $mapper = new Controller\RakNetController($socket, $addr, $rakPacket);
-        }else if($pid === Protocol\UnconnectedPong::headerID){
-            $rakPacket  = Protocol\UnconnectedPong::unpack($message);
+
+        // }else if($pid ===   Protocol\ClientConnect::headerID){
+        //     $rakPacket =    Protocol\ClientConnect::unpack($message);
+        //     $mapper = new Controller\ClientConnectController($socket, $addr, $rakPacket);
+
+        }else if($pid ===   Protocol\UnconnectedPong::headerID){
+            $rakPacket =    Protocol\UnconnectedPong::unpack($message);
             $mapper = new Controller\UnconnectedPongController($socket, $addr, $rakPacket);
+
         }else if(0x80 <= $pid and $pid <= 0x8f){
             $rakPacket  = Protocol\CustomPacket::unpack($message);
             $packets    = Protocol\AbstractDataPacket::unpackPackets($rakPacket->payload);
@@ -213,18 +221,20 @@ class OnMessage {
                     return;
                 }
             }
-            // }else if($pid === Protocol\NotAcknowledgement::headerID){
-            //     $rakPacket  = Protocol\NotAcknowledgement::unpack($message);
-            //     $mapper = new Controller\RakNetController($socket, $addr, $rakPacket);
-        }else if($pid === Protocol\Acknowledgement::headerID){
-            $rakPacket  = Protocol\Acknowledgement::unpack($message);
+
+        // }else if($pid ===   Protocol\NotAcknowledgement::headerID){
+        //     $rakPacket =    Protocol\NotAcknowledgement::unpack($message);
+        //     $mapper = new Controller\NotAcknowledgementController($socket, $addr, $rakPacket);
+
+        }else if($pid ===   Protocol\Acknowledgement::headerID){
+            $rakPacket =    Protocol\Acknowledgement::unpack($message);
             $mapper = new Controller\AcknowledgementController($socket, $addr, $rakPacket);
+
         }else{
             return;
         }
 
         $mapper->map();
-
 
     }
 }
