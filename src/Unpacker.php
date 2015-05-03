@@ -26,7 +26,7 @@ class Unpacker {
     }
 
     static private function unpackFloat($string){
-        if(Packer::isBigEndian()){
+        if(Endianness::isBigEndian()){
             return unpack("f", strrev($string))[1];
         }else{
             return unpack("f", $string)[1];

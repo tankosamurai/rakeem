@@ -3,7 +3,6 @@
 namespace Rakeem;
 
 class Packer {
-    static private $endianness;
 
     static function pack($format, $object){
         if(is_array($object)){
@@ -46,18 +45,10 @@ class Packer {
         return $temp;
     }
 
-    static function isBigEndian(){
-        if(!isset(self::$endianness)){
-            self::$endianness = unpack("C*", pack("f", 1.0))[1] === 0;
-        }
-
-        return self::$endianness;
-    }
-
     static private function packFloat($float){
         $string = pack("f", $float);
 
-        if(self::isBigEndian()){
+        if(Endianness::isBigEndian()){
             return $string;
         }else{
             return strrev($string);
