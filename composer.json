@@ -5,7 +5,8 @@
         "react/datagram": "dev-master",
         "predis/predis": "~1.1@dev",
         "hassankhan/config": "dev-master",
-        "analog/analog": "dev-master"
+        "analog/analog": "dev-master",
+        "tankosamurai/singlepack": "dev-master"
     },
     "license": "MIT",
     "authors": [
@@ -25,5 +26,11 @@
             "Rakeem\\Controller\\": "src/controller",
             "Rakeem\\Persistent\\": "src/persistent"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/tankosamurai/singlepack.git"
+        }
+    ]
 }

@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "883eb2b752f867f7ae1a42736362a8c7",
+    "hash": "77295f22f8891e28e9c6c5638adce774",
+    "content-hash": "e4ae2648b6081f0ef284f1696549ddb0",
     "packages": [
         {
             "name": "analog/analog",
@@ -12,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbroadway/analog.git",
-                "reference": "6a4cd5a62696939b553c790089c8cab085bd773f"
+                "reference": "69615c0e8b4033169b45d58f778fd3ba638d1d52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbroadway/analog/zipball/6a4cd5a62696939b553c790089c8cab085bd773f",
-                "reference": "6a4cd5a62696939b553c790089c8cab085bd773f",
+                "url": "https://api.github.com/repos/jbroadway/analog/zipball/69615c0e8b4033169b45d58f778fd3ba638d1d52",
+                "reference": "69615c0e8b4033169b45d58f778fd3ba638d1d52",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +54,7 @@
                 "logging",
                 "syslog"
             ],
-            "time": "2015-04-16 04:36:41"
+            "time": "2015-05-25 15:23:49"
         },
         {
             "name": "evenement/evenement",
@@ -107,12 +108,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/hassankhan/config.git",
-                "reference": "42ba051954745b565306f0f82c57814f54579f8d"
+                "reference": "e72f5c07c410a1d453eb5aeb3bf6b1c09f431cba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hassankhan/config/zipball/42ba051954745b565306f0f82c57814f54579f8d",
-                "reference": "42ba051954745b565306f0f82c57814f54579f8d",
+                "url": "https://api.github.com/repos/hassankhan/config/zipball/e72f5c07c410a1d453eb5aeb3bf6b1c09f431cba",
+                "reference": "e72f5c07c410a1d453eb5aeb3bf6b1c09f431cba",
                 "shasum": ""
             },
             "require": {
@@ -156,7 +157,7 @@
                 "yaml",
                 "yml"
             ],
-            "time": "2015-03-21 11:21:39"
+            "time": "2015-07-27 16:39:15"
         },
         {
             "name": "predis/predis",
@@ -164,12 +165,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nrk/predis.git",
-                "reference": "b8decc75a884fce1bfc62d5bc6823298a678f890"
+                "reference": "6bc1a38123f61efde92d8b4a73adabf168e09442"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/b8decc75a884fce1bfc62d5bc6823298a678f890",
-                "reference": "b8decc75a884fce1bfc62d5bc6823298a678f890",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/6bc1a38123f61efde92d8b4a73adabf168e09442",
+                "reference": "6bc1a38123f61efde92d8b4a73adabf168e09442",
                 "shasum": ""
             },
             "require": {
@@ -211,7 +212,7 @@
                 "predis",
                 "redis"
             ],
-            "time": "2015-01-02 13:37:26"
+            "time": "2015-07-30 18:51:15"
         },
         {
             "name": "psr/log",
@@ -219,13 +220,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "bf2c13de4300e227d7b2fd08027673a79c519987"
+                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/bf2c13de4300e227d7b2fd08027673a79c519987",
-                "reference": "bf2c13de4300e227d7b2fd08027673a79c519987",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/9e45edca52cc9c954680072c93e621f8b71fab26",
+                "reference": "9e45edca52cc9c954680072c93e621f8b71fab26",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
             },
             "type": "library",
             "extra": {
@@ -254,7 +258,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2015-03-26 14:39:45"
+            "time": "2015-06-02 13:48:41"
         },
         {
             "name": "react/cache",
@@ -301,12 +305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/datagram.git",
-                "reference": "a476b743cd4beed93ba7c83abb0288b87f8206b6"
+                "reference": "2e8189393ebe2bf01def76d3d756fd975fa7d407"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/datagram/zipball/a476b743cd4beed93ba7c83abb0288b87f8206b6",
-                "reference": "a476b743cd4beed93ba7c83abb0288b87f8206b6",
+                "url": "https://api.github.com/repos/reactphp/datagram/zipball/2e8189393ebe2bf01def76d3d756fd975fa7d407",
+                "reference": "2e8189393ebe2bf01def76d3d756fd975fa7d407",
                 "shasum": ""
             },
             "require": {
@@ -344,7 +348,7 @@
                 "server",
                 "udp"
             ],
-            "time": "2014-10-23 22:14:56"
+            "time": "2015-11-03 12:27:24"
         },
         {
             "name": "react/dns",
@@ -352,12 +356,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/dns.git",
-                "reference": "e1eaadb8ac637e61d1b642ebed37fa46c568ae9d"
+                "reference": "3fa027f1fe57e146203538c41db5b3e6c296b67a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/dns/zipball/e1eaadb8ac637e61d1b642ebed37fa46c568ae9d",
-                "reference": "e1eaadb8ac637e61d1b642ebed37fa46c568ae9d",
+                "url": "https://api.github.com/repos/reactphp/dns/zipball/3fa027f1fe57e146203538c41db5b3e6c296b67a",
+                "reference": "3fa027f1fe57e146203538c41db5b3e6c296b67a",
                 "shasum": ""
             },
             "require": {
@@ -386,7 +390,7 @@
                 "dns",
                 "dns-resolver"
             ],
-            "time": "2014-08-23 11:13:50"
+            "time": "2015-09-06 18:06:51"
         },
         {
             "name": "react/event-loop",
@@ -433,16 +437,16 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef"
+                "reference": "3b6fca09c7d56321057fa8867c8dbe1abf648627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
-                "reference": "365fcee430dfa4ace1fbc75737ca60ceea7eeeef",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/3b6fca09c7d56321057fa8867c8dbe1abf648627",
+                "reference": "3b6fca09c7d56321057fa8867c8dbe1abf648627",
                 "shasum": ""
             },
             "require": {
@@ -469,11 +473,11 @@
             "authors": [
                 {
                     "name": "Jan Sorgalla",
-                    "email": "jsorgalla@googlemail.com"
+                    "email": "jsorgalla@gmail.com"
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
-            "time": "2014-12-30 13:32:42"
+            "time": "2015-07-03 13:48:55"
         },
         {
             "name": "react/socket",
@@ -481,12 +485,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/socket.git",
-                "reference": "2949cf3673480fd968db22aa3ba1995d9f6ef936"
+                "reference": "9b3eba6e4983d27a81bce429d69145b4f632d53f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/socket/zipball/2949cf3673480fd968db22aa3ba1995d9f6ef936",
-                "reference": "2949cf3673480fd968db22aa3ba1995d9f6ef936",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/9b3eba6e4983d27a81bce429d69145b4f632d53f",
+                "reference": "9b3eba6e4983d27a81bce429d69145b4f632d53f",
                 "shasum": ""
             },
             "require": {
@@ -514,33 +518,33 @@
             "keywords": [
                 "Socket"
             ],
-            "time": "2014-12-04 14:13:22"
+            "time": "2015-08-07 19:59:11"
         },
         {
             "name": "react/stream",
-            "version": "v0.4.2",
+            "version": "v0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/stream.git",
-                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465"
+                "reference": "305b2328d2a2e157bc13b61a0f5c6e41b666b188"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/stream/zipball/acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
-                "reference": "acc7a5fec02e0aea674560e1d13c40ed0c8c5465",
+                "url": "https://api.github.com/repos/reactphp/stream/zipball/305b2328d2a2e157bc13b61a0f5c6e41b666b188",
+                "reference": "305b2328d2a2e157bc13b61a0f5c6e41b666b188",
                 "shasum": ""
             },
             "require": {
-                "evenement/evenement": "~2.0",
-                "php": ">=5.4.0"
+                "evenement/evenement": "^2.0|^1.0",
+                "php": ">=5.3.8"
             },
             "require-dev": {
-                "react/event-loop": "0.4.*",
-                "react/promise": "~2.0"
+                "react/event-loop": "^0.4|^0.3",
+                "react/promise": "^2.0|^1.0"
             },
             "suggest": {
-                "react/event-loop": "0.4.*",
-                "react/promise": "~2.0"
+                "react/event-loop": "^0.4",
+                "react/promise": "^2.0"
             },
             "type": "library",
             "extra": {
@@ -562,7 +566,32 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2014-09-10 03:32:31"
+            "time": "2015-10-07 18:32:58"
+        },
+        {
+            "name": "tankosamurai/singlepack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tankosamurai/singlepack.git",
+                "reference": "9e603df3d433ea27af564dc16adb6702d69c3cec"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "lib/Singlepack.php"
+                ],
+                "psr-4": {
+                    "Singlepack\\": "lib/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "tankosamurai",
+                    "email": "tankosamurai@gmail.com"
+                }
+            ],
+            "time": "2015-06-13 00:32:30"
         }
     ],
     "packages-dev": [],
@@ -572,7 +601,8 @@
         "react/datagram": 20,
         "predis/predis": 20,
         "hassankhan/config": 20,
-        "analog/analog": 20
+        "analog/analog": 20,
+        "tankosamurai/singlepack": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
