@@ -4,6 +4,7 @@ namespace Rakeem\Protocol;
 
 use Rakeem\Packer;
 use Rakeem\Unpacker;
+use SinglePack;
 
 abstract class AbstractPacket {
 
@@ -130,7 +131,7 @@ abstract class AbstractPacket {
         if("string" === $format){
             return $value;
         }else{
-            return Packer::pack($format, $value);
+            return SinglePack\pack($format, $value);
         }
     }
 
@@ -141,7 +142,7 @@ abstract class AbstractPacket {
         if("string" == $format){
             return $substr;
         }else{
-            return Unpacker::unpack($format, $substr);
+            return SinglePack\unpack($format, $substr);
         }
     }
 
