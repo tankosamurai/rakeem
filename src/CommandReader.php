@@ -17,14 +17,14 @@ class CommandReader{
 	function getCommandLine(){
 		$stdin = fopen("php://stdin", "r");
 		$read = [$stdin];
-    	$write = null;
-    	$exept = null;
-    	if(stream_select($read, $write, $exept, 0) > 0){
-       		foreach($read as $input => $fd){
-       			if($stdin === $fd){
-       				$line = trim(fgets($fd));
-	                switch($line){
-	                	case "stop":
+		$write = null;
+		$exept = null;
+		if(stream_select($read, $write, $exept, 0) > 0){
+			foreach($read as $input => $fd){
+				if($stdin === $fd){
+					$line = trim(fgets($fd));
+					switch($line){
+						case "stop":
 						case "shutdown":
 							echo "Shutdown a system now...\n";
 							self::$loop->cancelTimer(self::$loopsocket);
@@ -40,9 +40,9 @@ class CommandReader{
 							echo "Not Command!\n";
 						break;
 					}
-       			}
-            }
-        }
+				}
+			}
+		}
 	}
 
 }
