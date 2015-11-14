@@ -13,7 +13,7 @@ Analog::Handler(Analog\Handler\Stderr::init());
 
 $socket->on("message", new Rakeem\OnMessage());
 
-$loop->addPeriodicTimer(1, function()use($socket){
+$loopsocket = $loop->addPeriodicTimer(1, function()use($socket){
     // $sessions = new Rakeem\Persistent\SessionSet();
 
     // foreach($sessions->smembers() as $addr){
@@ -21,6 +21,12 @@ $loop->addPeriodicTimer(1, function()use($socket){
     //     $controller->eachSecond();
     // }
 });
+
+$reader = new Rakeem\CommandReader($loop, $loopsocket);
+
+$loopReader = $loop->addPeriodicTimer(1, "Rakeem\CommandReader::getCommandLine");
+
+$reader->setLoopReader($loopReader);
 
 $loop->run();
 
