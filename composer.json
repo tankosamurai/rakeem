@@ -8,6 +8,9 @@
         "analog/analog": "dev-master",
         "tankosamurai/singlepack": "dev-master"
     },
+    "require-dev": {
+        "psy/psysh": "dev-master"
+    },
     "license": "MIT",
     "authors": [
         {
