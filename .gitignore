@@ -1,1 +1,5 @@
 /vendor/
+
+dump.rdb
+
+composer.phar
